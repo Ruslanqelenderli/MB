@@ -1,0 +1,17 @@
+C:\Users\Ruslan-PC\source\repos\MB\MB.Business\obj\Debug\net6.0\MB.Business.csproj.AssemblyReference.cache
+C:\Users\Ruslan-PC\source\repos\MB\MB.Business\obj\Debug\net6.0\MB.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ruslan-PC\source\repos\MB\MB.Business\obj\Debug\net6.0\MB.Business.AssemblyInfoInputs.cache
+C:\Users\Ruslan-PC\source\repos\MB\MB.Business\obj\Debug\net6.0\MB.Business.AssemblyInfo.cs
+C:\Users\Ruslan-PC\source\repos\MB\MB.Business\obj\Debug\net6.0\MB.Business.csproj.CoreCompileInputs.cache
+C:\Users\Ruslan-PC\source\repos\MB\MB.Business\bin\Debug\net6.0\MB.Business.deps.json
+C:\Users\Ruslan-PC\source\repos\MB\MB.Business\bin\Debug\net6.0\MB.Business.dll
+C:\Users\Ruslan-PC\source\repos\MB\MB.Business\bin\Debug\net6.0\MB.Business.pdb
+C:\Users\Ruslan-PC\source\repos\MB\MB.Business\bin\Debug\net6.0\MB.DataAccess.dll
+C:\Users\Ruslan-PC\source\repos\MB\MB.Business\bin\Debug\net6.0\MB.Entity.dll
+C:\Users\Ruslan-PC\source\repos\MB\MB.Business\bin\Debug\net6.0\MB.DataAccess.pdb
+C:\Users\Ruslan-PC\source\repos\MB\MB.Business\bin\Debug\net6.0\MB.Entity.pdb
+C:\Users\Ruslan-PC\source\repos\MB\MB.Business\obj\Debug\net6.0\MB.Business.csproj.CopyComplete
+C:\Users\Ruslan-PC\source\repos\MB\MB.Business\obj\Debug\net6.0\MB.Business.dll
+C:\Users\Ruslan-PC\source\repos\MB\MB.Business\obj\Debug\net6.0\refint\MB.Business.dll
+C:\Users\Ruslan-PC\source\repos\MB\MB.Business\obj\Debug\net6.0\MB.Business.pdb
+C:\Users\Ruslan-PC\source\repos\MB\MB.Business\obj\Debug\net6.0\ref\MB.Business.dll

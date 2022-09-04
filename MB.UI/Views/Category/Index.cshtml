@@ -1,0 +1,51 @@
+﻿@{
+    var products = TempData["Categories"] as ICollection<MB.UI.Models.DTOs.CategoryDto>;
+}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">
+                <a href="/Category/Add/" class="#!">
+                    <i class="fa fa-edit">Add New</i>
+                </a>
+            </th>
+            <th scope="col">Name</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            var count = 1;
+            if (products != null)
+            {
+                @foreach (var product in products)
+                {
+                    <tr>
+                        <th scope="row">@count</th>
+                        <td>@product.Name</td>
+                        <td>@product.CreateDate.ToString("dd-MMM,yyyy")</td>
+                        <td>
+
+                            <a href="/Category/Update/@product.Id" class="#!">
+                                <i class="fa fa-edit">Update</i>
+                            </a>
+
+                        </td>
+                        <td>
+
+                            <a href="/Category/Delete/@product.Id" class="#!">
+                                <i class="fa fa-edit">Delete</i>
+                            </a>
+
+                        </td>
+
+                    </tr>
+                    count++;
+                }
+            }
+
+        }
+
+    </tbody>
+</table>

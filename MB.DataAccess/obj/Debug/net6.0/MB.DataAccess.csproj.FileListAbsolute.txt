@@ -1,0 +1,17 @@
+C:\Users\Ruslan-PC\source\repos\MB\MB.DataAccess\bin\Debug\net6.0\MB.DataAccess.deps.json
+C:\Users\Ruslan-PC\source\repos\MB\MB.DataAccess\bin\Debug\net6.0\MB.DataAccess.runtimeconfig.json
+C:\Users\Ruslan-PC\source\repos\MB\MB.DataAccess\bin\Debug\net6.0\MB.DataAccess.dll
+C:\Users\Ruslan-PC\source\repos\MB\MB.DataAccess\bin\Debug\net6.0\MB.DataAccess.pdb
+C:\Users\Ruslan-PC\source\repos\MB\MB.DataAccess\bin\Debug\net6.0\MB.Entity.dll
+C:\Users\Ruslan-PC\source\repos\MB\MB.DataAccess\bin\Debug\net6.0\MB.Entity.pdb
+C:\Users\Ruslan-PC\source\repos\MB\MB.DataAccess\obj\Debug\net6.0\MB.DataAccess.csproj.AssemblyReference.cache
+C:\Users\Ruslan-PC\source\repos\MB\MB.DataAccess\obj\Debug\net6.0\MB.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ruslan-PC\source\repos\MB\MB.DataAccess\obj\Debug\net6.0\MB.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Ruslan-PC\source\repos\MB\MB.DataAccess\obj\Debug\net6.0\MB.DataAccess.AssemblyInfo.cs
+C:\Users\Ruslan-PC\source\repos\MB\MB.DataAccess\obj\Debug\net6.0\MB.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Ruslan-PC\source\repos\MB\MB.DataAccess\obj\Debug\net6.0\MB.DataAccess.csproj.CopyComplete
+C:\Users\Ruslan-PC\source\repos\MB\MB.DataAccess\obj\Debug\net6.0\MB.DataAccess.dll
+C:\Users\Ruslan-PC\source\repos\MB\MB.DataAccess\obj\Debug\net6.0\refint\MB.DataAccess.dll
+C:\Users\Ruslan-PC\source\repos\MB\MB.DataAccess\obj\Debug\net6.0\MB.DataAccess.pdb
+C:\Users\Ruslan-PC\source\repos\MB\MB.DataAccess\obj\Debug\net6.0\MB.DataAccess.genruntimeconfig.cache
+C:\Users\Ruslan-PC\source\repos\MB\MB.DataAccess\obj\Debug\net6.0\ref\MB.DataAccess.dll

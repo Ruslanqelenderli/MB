@@ -1,0 +1,12 @@
+C:\Users\Ruslan-PC\source\repos\MB\MB.Entities\bin\Debug\net6.0\MB.Entity.deps.json
+C:\Users\Ruslan-PC\source\repos\MB\MB.Entities\bin\Debug\net6.0\MB.Entity.dll
+C:\Users\Ruslan-PC\source\repos\MB\MB.Entities\bin\Debug\net6.0\MB.Entity.pdb
+C:\Users\Ruslan-PC\source\repos\MB\MB.Entities\obj\Debug\net6.0\MB.Entity.csproj.AssemblyReference.cache
+C:\Users\Ruslan-PC\source\repos\MB\MB.Entities\obj\Debug\net6.0\MB.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ruslan-PC\source\repos\MB\MB.Entities\obj\Debug\net6.0\MB.Entity.AssemblyInfoInputs.cache
+C:\Users\Ruslan-PC\source\repos\MB\MB.Entities\obj\Debug\net6.0\MB.Entity.AssemblyInfo.cs
+C:\Users\Ruslan-PC\source\repos\MB\MB.Entities\obj\Debug\net6.0\MB.Entity.csproj.CoreCompileInputs.cache
+C:\Users\Ruslan-PC\source\repos\MB\MB.Entities\obj\Debug\net6.0\MB.Entity.dll
+C:\Users\Ruslan-PC\source\repos\MB\MB.Entities\obj\Debug\net6.0\refint\MB.Entity.dll
+C:\Users\Ruslan-PC\source\repos\MB\MB.Entities\obj\Debug\net6.0\MB.Entity.pdb
+C:\Users\Ruslan-PC\source\repos\MB\MB.Entities\obj\Debug\net6.0\ref\MB.Entity.dll
