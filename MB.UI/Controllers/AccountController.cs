@@ -7,8 +7,13 @@ using Newtonsoft.Json;
 
 namespace MB.UI.Controllers
 {
-    public class ManageController : Controller
+    public class AccountController : Controller
     {
+        public static string Token()
+        {
+            var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI4N2NiNDhmNC00MDg5LTRjYTgtODE3YS0wMjRkZDQzMmMzMTkiLCJuYW1lIjoicnVzbGFuLmdhbGFuZGFybGlAZ21haWwuY29tIiwibmJmIjoxNjYyMzMzMjE2LCJleHAiOjE2NjIzNTEyMTYsImlhdCI6MTY2MjMzMzIxNn0.-BWc6dNEWJbrWhRvLmg4l281CDE4zJr-M4SSyiz24tw";
+            return token;
+        }
         public IActionResult Login()
         {
             return View();
@@ -20,10 +25,11 @@ namespace MB.UI.Controllers
             var url = "http://localhost:5178/api/Auth";
             HttpResponseMessage response = await Api<LoginResultDto>.PostAsync(url, model);
             var jsonstring = await response.Content.ReadAsStringAsync();
+
             var values = JsonConvert.DeserializeObject<LoginResultDto>(jsonstring);
             if (values.Result)
             {
-                JwtTokenGenerator.GenerateJwtToken(values);
+                //JwtTokenGenerator.GenerateJwtToken(values);
                 return RedirectToAction("Index", "Home");
             }
             else

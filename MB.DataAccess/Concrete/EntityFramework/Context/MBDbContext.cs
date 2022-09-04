@@ -1,5 +1,6 @@
 ﻿using MB.Entity.Entities;
 using MB.Entity.Entities.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -51,8 +52,8 @@ namespace MB.DataAccess.Concrete.EntityFramework.Context
                 new Category() { Id = new Guid("febe926b-36cd-4c3c-8e96-046d0b6da71d"), Name = "Phone", Status = true, CreateDate = DateTime.Now }
                 );
             modelBuilder.Entity<AppRole>().HasData(
-                new AppRole() { Id = new Guid("e8f0130a-b4ac-46af-8ab8-825082ead915"), Name = "User",Description="User", Status = true, CreateDate = DateTime.Now },
-                new AppRole() { Id = new Guid("f06310dd-0a27-4897-832d-2ebc7feb606e"), Name = "Admin",Description="Admin", Status = true, CreateDate = DateTime.Now }
+                new AppRole() { Id = new Guid("e8f0130a-b4ac-46af-8ab8-825082ead915"), Name = "User",Description="User" },
+                new AppRole() { Id = new Guid("f06310dd-0a27-4897-832d-2ebc7feb606e"), Name = "Admin",Description="Admin"}
                 );
             modelBuilder.Entity<AppUser>().HasData(
                 new AppUser() { Id = new Guid("87cb48f4-4089-4ca8-817a-024dd432c319"), Name = "Ruslan", Surname = "Galandarli", Email = "ruslan.galandarli@gmail.com", PasswordHash= "+vm1hl0OyKZBtorJGZVZVc1awVcXBCFd+yJPRXwkYjQ=",AppRoleId= new Guid("e8f0130a-b4ac-46af-8ab8-825082ead915"), Status = true, CreateDate = DateTime.Now }

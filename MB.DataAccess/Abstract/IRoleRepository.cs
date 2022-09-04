@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MB.DataAccess.Abstract
 {
-    public interface IRoleRepository:IAsyncRepository<AppRole,DataAccessReturnResult<AppRole>>,IRepository<AppRole, DataAccessReturnResult<AppRole>>
+    public interface IRoleRepository: IRepository<AppRole, DataAccessReturnResult<AppRole>>, IAsyncRepository<AppRole, DataAccessReturnResult<AppRole>>
     {
     }
 }

@@ -8,7 +8,7 @@ namespace MB.UI.Helpers.GenerateToken
 {
 	public class JwtTokenGenerator
 	{
-        public static string GenerateJwtToken(LoginResultDto model)
+        public  string GenerateJwtToken(LoginResultDto model)
         {
             try
             {
@@ -36,5 +36,6 @@ namespace MB.UI.Helpers.GenerateToken
             }
 
         }
+        
     }
 }

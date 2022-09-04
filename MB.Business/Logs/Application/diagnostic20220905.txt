@@ -1,0 +1,96 @@
+2022-09-05 03:12:13.591 +04:00 [INF] User profile is available. Using 'C:\Users\Ruslan-PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-05 03:12:17.307 +04:00 [INF] Now listening on: http://localhost:5178
+2022-09-05 03:12:17.311 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-05 03:12:17.311 +04:00 [INF] Hosting environment: Development
+2022-09-05 03:12:17.311 +04:00 [INF] Content root path: C:\Users\Ruslan-PC\source\repos\MB\MB.API\
+2022-09-05 03:12:25.517 +04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5178/swagger/index.html - -
+2022-09-05 03:12:29.996 +04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5178/swagger/index.html - - - 200 - text/html;charset=utf-8 4487.3705ms
+2022-09-05 03:12:30.244 +04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5178/_framework/aspnetcore-browser-refresh.js - -
+2022-09-05 03:12:30.285 +04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5178/_framework/aspnetcore-browser-refresh.js - - - 200 11982 application/javascript;+charset=utf-8 40.7344ms
+2022-09-05 03:12:30.338 +04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5178/_vs/browserLink - -
+2022-09-05 03:12:30.721 +04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5178/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 383.0153ms
+2022-09-05 03:12:31.169 +04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5178/swagger/v1/swagger.json - -
+2022-09-05 03:12:31.956 +04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5178/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 787.3683ms
+2022-09-05 03:12:46.274 +04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5178/Product/GetAllForStatusInclude - -
+2022-09-05 03:12:52.590 +04:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2022-09-05 03:12:52.958 +04:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: 'System.DateTime', Current time: 'System.DateTime'.
+2022-09-05 03:12:52.990 +04:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-09-05 03:12:53.145 +04:00 [INF] AuthenticationScheme: Bearer was challenged.
+2022-09-05 03:12:53.145 +04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5178/Product/GetAllForStatusInclude - - - 401 0 - 6871.2909ms
+2022-09-05 03:13:25.781 +04:00 [INF] Request starting HTTP/1.1 POST http://localhost:5178/api/Auth application/json 71
+2022-09-05 03:13:25.806 +04:00 [INF] Executing endpoint 'MB.API.Controllers.AuthController.Login (MB.API)'
+2022-09-05 03:13:25.878 +04:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(MB.Business.Concrete.DTOs.LoginDto) on controller MB.API.Controllers.AuthController (MB.API).
+2022-09-05 03:13:31.400 +04:00 [INF] Entity Framework Core 6.0.8 initialized 'MBDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-09-05 03:13:36.742 +04:00 [INF] Executed DbCommand (314ms) [Parameters=[@__dto_Email_0='?' (Size = 4000), @__HashPassword_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AppRoleId], [a].[CreateDate], [a].[Email], [a].[Name], [a].[PasswordHash], [a].[Status], [a].[Surname], [a].[UpdateDate]
+FROM [AppUsers] AS [a]
+WHERE ([a].[Email] = @__dto_Email_0) AND ([a].[PasswordHash] = @__HashPassword_1)
+2022-09-05 03:13:37.226 +04:00 [INF] Executing OkObjectResult, writing value of type 'MB.Business.Concrete.DTOs.LoginResultDto'.
+2022-09-05 03:13:37.281 +04:00 [INF] Executed action MB.API.Controllers.AuthController.Login (MB.API) in 11392.1584ms
+2022-09-05 03:13:37.282 +04:00 [INF] Executed endpoint 'MB.API.Controllers.AuthController.Login (MB.API)'
+2022-09-05 03:13:37.292 +04:00 [INF] Request finished HTTP/1.1 POST http://localhost:5178/api/Auth application/json 71 - 200 - application/json;+charset=utf-8 11511.0848ms
+2022-09-05 03:23:46.428 +04:00 [INF] User profile is available. Using 'C:\Users\Ruslan-PC\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-09-05 03:23:46.684 +04:00 [INF] Now listening on: http://localhost:5178
+2022-09-05 03:23:46.688 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-05 03:23:46.688 +04:00 [INF] Hosting environment: Development
+2022-09-05 03:23:46.688 +04:00 [INF] Content root path: C:\Users\Ruslan-PC\source\repos\MB\MB.API\
+2022-09-05 03:23:47.302 +04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5178/swagger/index.html - -
+2022-09-05 03:23:48.257 +04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5178/swagger/index.html - - - 200 - text/html;charset=utf-8 961.7067ms
+2022-09-05 03:23:48.257 +04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5178/Product/GetAllForStatusInclude - -
+2022-09-05 03:23:48.499 +04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5178/_framework/aspnetcore-browser-refresh.js - -
+2022-09-05 03:23:48.501 +04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5178/_framework/aspnetcore-browser-refresh.js - - - 200 11982 application/javascript;+charset=utf-8 2.0682ms
+2022-09-05 03:23:48.507 +04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5178/_vs/browserLink - -
+2022-09-05 03:23:48.563 +04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5178/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 55.4397ms
+2022-09-05 03:23:48.962 +04:00 [INF] Executing endpoint 'MB.API.Controllers.ProductController.GetAllForStatusInclude (MB.API)'
+2022-09-05 03:23:49.009 +04:00 [INF] Route matched with {action = "GetAllForStatusInclude", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllForStatusInclude() on controller MB.API.Controllers.ProductController (MB.API).
+2022-09-05 03:23:49.162 +04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5178/swagger/v1/swagger.json - -
+2022-09-05 03:23:49.544 +04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5178/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 382.7492ms
+2022-09-05 03:23:50.813 +04:00 [INF] Start GetAllForStatusInclude method in ProductController.
+2022-09-05 03:23:52.322 +04:00 [INF] Entity Framework Core 6.0.8 initialized 'MBDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-09-05 03:23:54.279 +04:00 [INF] Executed DbCommand (335ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[AppUserId], [p].[CategoryId], [p].[Count], [p].[CreateDate], [p].[Name], [p].[Status], [p].[UpdateDate], [a].[Id], [a].[AppRoleId], [a].[CreateDate], [a].[Email], [a].[Name], [a].[PasswordHash], [a].[Status], [a].[Surname], [a].[UpdateDate], [c].[Id], [c].[CreateDate], [c].[Name], [c].[Status], [c].[UpdateDate]
+FROM [Products] AS [p]
+INNER JOIN [AppUsers] AS [a] ON [p].[AppUserId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+2022-09-05 03:23:54.528 +04:00 [INF] GetAll Succeed in ProductController GetAllForStatusInclude method
+2022-09-05 03:23:54.539 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MB.Business.Concrete.DTOs.ProductDto, MB.Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-05 03:23:54.623 +04:00 [INF] Executed action MB.API.Controllers.ProductController.GetAllForStatusInclude (MB.API) in 5604.8965ms
+2022-09-05 03:23:54.624 +04:00 [INF] Executed endpoint 'MB.API.Controllers.ProductController.GetAllForStatusInclude (MB.API)'
+2022-09-05 03:23:54.631 +04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5178/Product/GetAllForStatusInclude - - - 200 - application/json;+charset=utf-8 6373.4990ms
+2022-09-05 03:26:31.741 +04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5178/Category/GetAllForStatusInclude - -
+2022-09-05 03:26:31.745 +04:00 [INF] Executing endpoint 'MB.API.Controllers.CategoryController.GetAllForStatusInclude (MB.API)'
+2022-09-05 03:26:31.751 +04:00 [INF] Route matched with {action = "GetAllForStatusInclude", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllForStatusInclude() on controller MB.API.Controllers.CategoryController (MB.API).
+2022-09-05 03:26:31.767 +04:00 [INF] Start GetAllForStatusInclude method in CategoryController.
+2022-09-05 03:26:31.837 +04:00 [INF] Entity Framework Core 6.0.8 initialized 'MBDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-09-05 03:26:32.048 +04:00 [INF] Executed DbCommand (90ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDate], [c].[Name], [c].[Status], [c].[UpdateDate], [p].[Id], [p].[AppUserId], [p].[CategoryId], [p].[Count], [p].[CreateDate], [p].[Name], [p].[Status], [p].[UpdateDate]
+FROM [Categories] AS [c]
+LEFT JOIN [Products] AS [p] ON [c].[Id] = [p].[CategoryId]
+ORDER BY [c].[Id]
+2022-09-05 03:26:32.183 +04:00 [INF] GetAll Succeed in CategoryController GetAllForStatusInclude method
+2022-09-05 03:26:32.183 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MB.Business.Concrete.DTOs.CategoryDto, MB.Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-05 03:26:32.191 +04:00 [INF] Executed action MB.API.Controllers.CategoryController.GetAllForStatusInclude (MB.API) in 439.2581ms
+2022-09-05 03:26:32.191 +04:00 [INF] Executed endpoint 'MB.API.Controllers.CategoryController.GetAllForStatusInclude (MB.API)'
+2022-09-05 03:26:32.191 +04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5178/Category/GetAllForStatusInclude - - - 200 - application/json;+charset=utf-8 449.6598ms
+2022-09-05 03:26:37.469 +04:00 [INF] Request starting HTTP/1.1 GET http://localhost:5178/Product/GetAllForStatusInclude - -
+2022-09-05 03:26:37.521 +04:00 [INF] Executing endpoint 'MB.API.Controllers.ProductController.GetAllForStatusInclude (MB.API)'
+2022-09-05 03:26:37.521 +04:00 [INF] Route matched with {action = "GetAllForStatusInclude", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllForStatusInclude() on controller MB.API.Controllers.ProductController (MB.API).
+2022-09-05 03:26:37.522 +04:00 [INF] Start GetAllForStatusInclude method in ProductController.
+2022-09-05 03:26:37.536 +04:00 [INF] Entity Framework Core 6.0.8 initialized 'MBDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.8' with options: None
+2022-09-05 03:26:37.543 +04:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[AppUserId], [p].[CategoryId], [p].[Count], [p].[CreateDate], [p].[Name], [p].[Status], [p].[UpdateDate], [a].[Id], [a].[AppRoleId], [a].[CreateDate], [a].[Email], [a].[Name], [a].[PasswordHash], [a].[Status], [a].[Surname], [a].[UpdateDate], [c].[Id], [c].[CreateDate], [c].[Name], [c].[Status], [c].[UpdateDate]
+FROM [Products] AS [p]
+INNER JOIN [AppUsers] AS [a] ON [p].[AppUserId] = [a].[Id]
+INNER JOIN [Categories] AS [c] ON [p].[CategoryId] = [c].[Id]
+2022-09-05 03:26:37.544 +04:00 [INF] GetAll Succeed in ProductController GetAllForStatusInclude method
+2022-09-05 03:26:37.544 +04:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MB.Business.Concrete.DTOs.ProductDto, MB.Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-05 03:26:37.545 +04:00 [INF] Executed action MB.API.Controllers.ProductController.GetAllForStatusInclude (MB.API) in 23.11ms
+2022-09-05 03:26:37.545 +04:00 [INF] Executed endpoint 'MB.API.Controllers.ProductController.GetAllForStatusInclude (MB.API)'
+2022-09-05 03:26:37.545 +04:00 [INF] Request finished HTTP/1.1 GET http://localhost:5178/Product/GetAllForStatusInclude - - - 200 - application/json;+charset=utf-8 75.5307ms

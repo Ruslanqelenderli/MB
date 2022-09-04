@@ -11,11 +11,8 @@ using System.Threading.Tasks;
 
 namespace MB.DataAccess.Concrete.EntityFramework.Repositories
 {
-    public class RoleRepository : EFGenericRepository<AppRole,DataAccessReturnResult<AppRole>,MBDbContext>,IRoleRepository
+    public class RoleRepository : EFGenericRepository<AppRole, DataAccessReturnResult<AppRole>, MBDbContext>, IRoleRepository
     {
-        public RoleRepository(MBDbContext context):base(context)
-        {
-
-        }
+        public RoleRepository(MBDbContext context) : base(context) { }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using MB.DataAccess.Abstract.IGenericRepository;
 using MB.DataAccess.Concrete.ReturnResult;
+using MB.Entity.Entities;
 using MB.Entity.Entities.Identity;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace MB.DataAccess.Abstract
 {
-    public interface IUserRepository:IRepository<AppUser,DataAccessReturnResult<AppUser>>,IAsyncRepository<AppUser,DataAccessReturnResult<AppUser>>
+    public interface IUserRepository: IRepository<AppUser, DataAccessReturnResult<AppUser>>, IAsyncRepository<AppUser, DataAccessReturnResult<AppUser>>
     {
     }
 }
