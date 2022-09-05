@@ -27,7 +27,7 @@ namespace MB.API.Controllers
         }
 
 
-        [HttpGet("/Product/GetAllForStatusInclude")]
+        [HttpGet("/products")]
         public async Task<IActionResult> GetAllForStatusInclude()
          {
             logger.LogInformation("Start GetAllForStatusInclude method in ProductController.");
@@ -45,7 +45,7 @@ namespace MB.API.Controllers
             }
         }
 
-        [HttpPost("/Product/Add")]
+        [HttpPost("/product/add")]
         public async Task<IActionResult> Add(ProductAddDto dto)
         {
             if (!ModelState.IsValid)
@@ -66,7 +66,7 @@ namespace MB.API.Controllers
             }
         }
 
-        [HttpPut("/Product/Update")]
+        [HttpPut("/product/update")]
         public async Task<IActionResult> Update(ProductUpdateDto dto)
         {
             if (!ModelState.IsValid)
@@ -87,7 +87,7 @@ namespace MB.API.Controllers
             }
         }
 
-        [HttpDelete("/Product/Delete/{id:Guid}")]
+        [HttpDelete("/product/delete/{id:Guid}")]
         public async Task<IActionResult> Delete(Guid id)
         {
             logger.LogInformation("Start Delete method in ProductController.");
@@ -104,7 +104,7 @@ namespace MB.API.Controllers
             }
         }
 
-        [HttpGet("/Product/GetByIdInclude/{id:Guid}")]
+        [HttpGet("/product/{id:Guid}")]
         public async Task<IActionResult> GetByIdInclude(Guid id)
         {
             logger.LogInformation("Start GetByIdInclude method in ProductController.");

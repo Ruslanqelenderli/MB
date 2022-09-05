@@ -50,7 +50,7 @@ namespace MB.UI.Controllers
             {
                 return View(model);
             }
-            var url = "http://localhost:5178/User/Add";
+            var url = "http://localhost:5178/add";
             var result = await Api<AppUserDto>.PostAsync(url, model);
             if (result.IsSuccessStatusCode)
             {

@@ -24,7 +24,7 @@ namespace MB.API.Controllers
         }
 
 
-        [HttpGet("/Category/GetAllForStatusInclude")]
+        [HttpGet("/categories")]
         public async Task<IActionResult> GetAllForStatusInclude()
         {
             logger.LogInformation("Start GetAllForStatusInclude method in CategoryController.");
@@ -42,7 +42,7 @@ namespace MB.API.Controllers
             }
         }
 
-        [HttpPost("/Category/Add")]
+        [HttpPost("/category/add")]
         public async Task<IActionResult> Add(CategoryAddDto dto)
         {
             if (!ModelState.IsValid)
@@ -63,7 +63,7 @@ namespace MB.API.Controllers
             }
         }
 
-        [HttpPut("/Category/Update")]
+        [HttpPut("/category/update")]
         public async Task<IActionResult> Update(CategoryUpdateDto dto)
         {
             if (!ModelState.IsValid)
@@ -84,7 +84,7 @@ namespace MB.API.Controllers
             }
         }
 
-        [HttpDelete("/Category/Delete/{id:Guid}")]
+        [HttpDelete("/category/delete/{id:Guid}")]
         public async Task<IActionResult> Delete(Guid id)
         {
             logger.LogInformation("Start Delete method in CategoryController.");
@@ -101,7 +101,7 @@ namespace MB.API.Controllers
             }
         }
 
-        [HttpGet("/Category/GetByIdInclude/{id:Guid}")]
+        [HttpGet("/category/{id:Guid}")]
         public async Task<IActionResult> GetByIdInclude(Guid id)
         {
             logger.LogInformation("Start GetByIdInclude method in CategoryController.");

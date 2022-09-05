@@ -22,7 +22,7 @@ namespace MB.API.Controllers
         }
 
 
-        [HttpGet("/Role/GetAllForStatusInclude")]
+        [HttpGet("/roles")]
         public async Task<IActionResult> GetAllForStatusInclude()
         {
             logger.LogInformation("Start GetAllForStatusInclude method in RoleController.");
@@ -40,7 +40,7 @@ namespace MB.API.Controllers
             }
         }
 
-        [HttpPost("/Role/Add")]
+        [HttpPost("/role/add")]
         public async Task<IActionResult> Add(RoleAddDto dto)
         {
             if (!ModelState.IsValid)
@@ -61,7 +61,7 @@ namespace MB.API.Controllers
             }
         }
 
-        [HttpPut("/Role/Update")]
+        [HttpPut("/role/update")]
         public async Task<IActionResult> Update(RoleUpdateDto dto)
         {
             if (!ModelState.IsValid)
@@ -82,7 +82,7 @@ namespace MB.API.Controllers
             }
         }
 
-        [HttpDelete("/Role/Delete")]
+        [HttpDelete("/role/delete/{id:Guid}")]
         public async Task<IActionResult> Delete(Guid id)
         {
             logger.LogInformation("Start Delete method in RoleController.");
@@ -99,7 +99,7 @@ namespace MB.API.Controllers
             }
         }
 
-        [HttpGet("/Role/GetByIdInclude/")]
+        [HttpGet("/role/{id:Guid}")]
         public async Task<IActionResult> GetByIdInclude(Guid id)
         {
             logger.LogInformation("Start GetByIdInclude method in RoleController.");

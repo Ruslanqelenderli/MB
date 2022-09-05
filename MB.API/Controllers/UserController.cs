@@ -22,7 +22,7 @@ namespace MB.API.Controllers
         }
 
 
-        [HttpGet("/User/GetAllForStatusInclude")]
+        [HttpGet("/users")]
         public async Task<IActionResult> GetAllForStatusInclude()
         {
             logger.LogInformation("Start GetAllForStatusInclude method in UserController.");
@@ -40,7 +40,7 @@ namespace MB.API.Controllers
             }
         }
         [AllowAnonymous]
-        [HttpPost("/User/Add")]
+        [HttpPost("/user/add")]
         public async Task<IActionResult> Add(AppUserAddDto dto)
         {
             if (!ModelState.IsValid)
@@ -62,7 +62,7 @@ namespace MB.API.Controllers
             }
         }
 
-        [HttpPut("/User/Update")]
+        [HttpPut("/user/update")]
         public async Task<IActionResult> Update(AppUserUpdateDto dto)
         {
             if (!ModelState.IsValid)
@@ -83,7 +83,7 @@ namespace MB.API.Controllers
             }
         }
 
-        [HttpDelete("/User/Delete")]
+        [HttpDelete("/user/delete/{id:Guid}")]
         public async Task<IActionResult> Delete(Guid id)
         {
             logger.LogInformation("Start Delete method in UserController.");
@@ -100,7 +100,7 @@ namespace MB.API.Controllers
             }
         }
 
-        [HttpGet("/User/GetByIdInclude/")]
+        [HttpGet("/user/{id:Guid}")]
         public async Task<IActionResult> GetByIdInclude(Guid id)
         {
             logger.LogInformation("Start GetByIdInclude method in UserController.");

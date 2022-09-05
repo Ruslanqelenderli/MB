@@ -11,13 +11,13 @@ namespace MB.UI.Controllers
     {
         public static string Token()
         {
-            var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI4N2NiNDhmNC00MDg5LTRjYTgtODE3YS0wMjRkZDQzMmMzMTkiLCJuYW1lIjoicnVzbGFuLmdhbGFuZGFybGlAZ21haWwuY29tIiwibmJmIjoxNjYyMzMzMjE2LCJleHAiOjE2NjIzNTEyMTYsImlhdCI6MTY2MjMzMzIxNn0.-BWc6dNEWJbrWhRvLmg4l281CDE4zJr-M4SSyiz24tw";
+            var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI4N2NiNDhmNC00MDg5LTRjYTgtODE3YS0wMjRkZDQzMmMzMTkiLCJuYW1lIjoicnVzbGFuLmdhbGFuZGFybGlAZ21haWwuY29tIiwibmJmIjoxNjYyMzY2NTAzLCJleHAiOjE2NjIzODQ1MDMsImlhdCI6MTY2MjM2NjUwM30.DBXYcA_bZ0Ml43BLRWIkHR8PY0W9Eh4pLgJjGLxN520";
             return token;
         }
         public async Task<IActionResult> Index()
         {
            
-            var categories = await Api<CategoryDto>.GetAsync("http://localhost:5178/Category/GetAllForStatusInclude", Token());
+            var categories = await Api<CategoryDto>.GetAsync("http://localhost:5178/categories", Token());
 
             TempData["Categories"] = categories;
             //+vm1hl0OyKZBtorJGZVZVc1awVcXBCFd+yJPRXwkYjQ=
@@ -29,7 +29,7 @@ namespace MB.UI.Controllers
 
             
 
-            var url = "http://localhost:5178/Category/Delete/" + id;
+            var url = "http://localhost:5178/category/delete/" + id;
             var result = await Api<CategoryDto>.DeleteAsync(url, Token());
             if (result.IsSuccessStatusCode)
             {
@@ -56,7 +56,7 @@ namespace MB.UI.Controllers
 
             }
 
-            var url = "http://localhost:5178/Category/Add";
+            var url = "http://localhost:5178/category/add";
             var result = await Api<CategoryDto>.PostAsync(url, model, Token());
             if (result.IsSuccessStatusCode)
             {
@@ -69,7 +69,7 @@ namespace MB.UI.Controllers
         {
             
             
-            var product = await Api<CategoryDto>.GetAsync("http://localhost:5178/Category/GetByIdInclude/" + id, Token());
+            var product = await Api<CategoryDto>.GetAsync("http://localhost:5178/category/" + id, Token());
             var model = new CategoryUpdateDto();
             model.Id = product.FirstOrDefault().Id;
             model.Name = product.FirstOrDefault().Name;
@@ -90,7 +90,7 @@ namespace MB.UI.Controllers
             }
 
 
-            var url = "http://localhost:5178/Category/Update";
+            var url = "http://localhost:5178/category/update";
             var result = await Api<CategoryDto>.PutAsync(url, model, Token());
             if (result.IsSuccessStatusCode)
             {

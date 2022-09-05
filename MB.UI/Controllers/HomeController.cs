@@ -15,7 +15,7 @@ namespace MB.UI.Controllers
     {
         public static string Token()
         {
-            var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI4N2NiNDhmNC00MDg5LTRjYTgtODE3YS0wMjRkZDQzMmMzMTkiLCJuYW1lIjoicnVzbGFuLmdhbGFuZGFybGlAZ21haWwuY29tIiwibmJmIjoxNjYyMzMzMjE2LCJleHAiOjE2NjIzNTEyMTYsImlhdCI6MTY2MjMzMzIxNn0.-BWc6dNEWJbrWhRvLmg4l281CDE4zJr-M4SSyiz24tw";
+            var token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiI4N2NiNDhmNC00MDg5LTRjYTgtODE3YS0wMjRkZDQzMmMzMTkiLCJuYW1lIjoicnVzbGFuLmdhbGFuZGFybGlAZ21haWwuY29tIiwibmJmIjoxNjYyMzY2NTAzLCJleHAiOjE2NjIzODQ1MDMsImlhdCI6MTY2MjM2NjUwM30.DBXYcA_bZ0Ml43BLRWIkHR8PY0W9Eh4pLgJjGLxN520";
             return token;
         }
         public async  Task<IActionResult> Index()
@@ -23,7 +23,7 @@ namespace MB.UI.Controllers
             
             
            
-            var products = await Api<ProductDto>.GetAsync("http://localhost:5178/Product/GetAllForStatusInclude", Token());
+            var products = await Api<ProductDto>.GetAsync("http://localhost:5178/products", Token());
             
             TempData["Products"] = products;
             //+vm1hl0OyKZBtorJGZVZVc1awVcXBCFd+yJPRXwkYjQ=
@@ -35,7 +35,7 @@ namespace MB.UI.Controllers
 
             
             
-            var url = "http://localhost:5178/Product/Delete/"+id;
+            var url = "http://localhost:5178/product/delete/"+id;
             var result = await Api<ProductDto>.DeleteAsync(url, Token());
             if (result.IsSuccessStatusCode)
             {
@@ -48,7 +48,7 @@ namespace MB.UI.Controllers
         public async Task<IActionResult> Add()
         {
            
-            var categories = await Api<CategoryDto>.GetAsync("http://localhost:5178/Category/GetAllForStatusInclude", Token());
+            var categories = await Api<CategoryDto>.GetAsync("http://localhost:5178/categories", Token());
             TempData["Categories"] = categories;
             return View();
         }
@@ -61,13 +61,13 @@ namespace MB.UI.Controllers
             if (!ModelState.IsValid)
             {
 
-                var categories = await Api<CategoryDto>.GetAsync("http://localhost:5178/Category/GetAllForStatusInclude", Token());
+                var categories = await Api<CategoryDto>.GetAsync("http://localhost:5178/categories", Token());
                 TempData["Categories"] = categories;
                 return View(model);
 
             } 
            
-            var url = "http://localhost:5178/Product/Add";
+            var url = "http://localhost:5178/product/add";
             var result = await Api<ProductDto>.PostAsync(url, model, Token());
             if (result.IsSuccessStatusCode)
             {
@@ -78,9 +78,9 @@ namespace MB.UI.Controllers
         public async Task<IActionResult> Update(Guid id)
         {
            
-            var categories = await Api<CategoryDto>.GetAsync("http://localhost:5178/Category/GetAllForStatusInclude", Token());
+            var categories = await Api<CategoryDto>.GetAsync("http://localhost:5178/categories", Token());
             TempData["Categories"] = categories;
-            var product= await Api<ProductDto>.GetAsync("http://localhost:5178/Product/GetByIdInclude/"+id, Token());
+            var product= await Api<ProductDto>.GetAsync("http://localhost:5178/product/"+id, Token());
             var model = new ProductUpdateDto();
             model.Id = product.FirstOrDefault().Id;
             model.Name = product.FirstOrDefault().Name;
@@ -98,14 +98,14 @@ namespace MB.UI.Controllers
             
             if (!ModelState.IsValid)
             {
-                var categories = await Api<CategoryDto>.GetAsync("http://localhost:5178/Category/GetAllForStatusInclude", Token());
+                var categories = await Api<CategoryDto>.GetAsync("http://localhost:5178/categories", Token());
                 TempData["Categories"] = categories;
                 return View(model);
 
             }
             
 
-            var url = "http://localhost:5178/Product/Update";
+            var url = "http://localhost:5178/product/update";
             var result = await Api<ProductDto>.PutAsync(url,model, Token());
             if (result.IsSuccessStatusCode)
             {
